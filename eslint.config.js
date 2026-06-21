@@ -19,7 +19,5 @@ export default defineConfig([
       ecmaVersion: 2020,
       globals: globals.browser,
     },
-    fixToUnknown: false,
-    ignoreRestArgs: false,
   },
 ]);

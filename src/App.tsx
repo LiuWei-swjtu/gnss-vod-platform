@@ -5,6 +5,7 @@ import Demo0 from "./pages/Demo0";
 import Demo1 from "./pages/Demo1";
 import Demo2 from "./pages/Demo2";
 import Demo3 from "./pages/Demo3";
+import { HistoryPage, HomePage, SkyPage, SnrPage, StationsPage, TrendPage } from "./pages/VodPlatform";
 
 const Index = lazy(() => import("./pages/Index/index"));
 
@@ -31,7 +32,13 @@ function App() {
   return (
     <div ref={containerRef} style={{ willChange: "transform, opacity" }}>
       <Routes>
-        <Route path="/" element={<Index />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/stations" element={<StationsPage />} />
+        <Route path="/trend" element={<TrendPage />} />
+        <Route path="/snr" element={<SnrPage />} />
+        <Route path="/sky" element={<SkyPage />} />
+        <Route path="/history" element={<HistoryPage />} />
+        <Route path="/gallery" element={<Index />} />
         <Route path="/demo0" element={<Demo0 />} />
         <Route path="/demo1" element={<Demo1 />} />
         <Route path="/demo2" element={<Demo2 />} />
